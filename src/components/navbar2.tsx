@@ -35,8 +35,6 @@ class NavBar2 extends React.Component {
             list-style: none;
             display: flex;
             height: 75px;
-            @media screen and (max-height: 700px) {
-            }
           `}
         >
           <NavLink href="#" width="50%" backColor="#161A3E">
