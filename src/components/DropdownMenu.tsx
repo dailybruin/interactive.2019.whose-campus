@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import HamburgerMenu from 'react-hamburger-menu'
 import { css } from 'emotion'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
@@ -92,7 +92,6 @@ const DropdownSection: React.SFC<IDropdownSectionComponentProps> = ({
         {articles.map(article => (
           <a
             className={css`
-              display: block;
               color: white;
               text-decoration: none;
               &:hover {
@@ -171,7 +170,7 @@ export class DropdownMenu extends React.Component<
             className={this.addBarColorClass(css`
               padding: 1.5rem;
               transition: all 0.3s;
-              display: inline-block;
+
               width: 100%;
               display: flex;
               background-color: #161a3e;
@@ -192,7 +191,6 @@ export class DropdownMenu extends React.Component<
             </div>
             <div
               className={css`
-                display: inline-block;
                 color: white;
                 letter-spacing: 3px;
                 font-size: 1.5rem;

@@ -10,7 +10,7 @@ const typography = new Typography({
     },
     {
       name: 'Montserrat',
-      styles: ['400'],
+      styles: ['400', '600'],
     },
   ],
   headerFontFamily: ['Georgia', 'serif'],
