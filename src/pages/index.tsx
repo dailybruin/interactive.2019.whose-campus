@@ -9,6 +9,8 @@ import {
   YPosition,
 } from '@dailybruin/lux'
 
+import NavBar2 from '../components/navbar2'
+
 export const query = graphql`
   query {
     site {
@@ -32,13 +34,9 @@ export const query = graphql`
 const IndexPage = ({ data }) => (
   <>
     <Head {...data.site.siteMetadata} />
-    <CoverPhoto
-      headline={data.kerckhoffArticle.headline}
-      authors={data.kerckhoffArticle.author}
-      imageURL="https://chancellor.ucla.edu/wp-content/uploads/2018/07/ChancellorBlock_1366x912_acf_cropped.jpg"
-      xPosition={XPosition.Center}
-      yPosition={YPosition.Center}
-    />
+
+    <NavBar2 />
+
     <Article dropcap={true} content={data.kerckhoffArticle.content} />
     <Footer developers="Nathan Smith" copyrightYear={2018} />
   </>
