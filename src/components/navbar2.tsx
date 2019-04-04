@@ -38,7 +38,7 @@ class NavBar2 extends React.Component {
           `}
         >
           <NavLink href="#" width="50%" backColor="#161A3E">
-            Whose Campus
+            Whose Campus?
           </NavLink>
           <NavLink href="#" width="16.667%" backColor="#6966a3">
             Equity

@@ -6,7 +6,12 @@ import { DropdownMenu } from './DropdownMenu'
 class NavWrapper extends React.Component {
   render() {
     return (
-      <div>
+      <div
+        className={css`
+          position: sticky;
+          top: 0px;
+        `}
+      >
         <div
           className={css`
             @media screen and (max-width: 700px) {

@@ -93,6 +93,7 @@ const DropdownSection: React.SFC<IDropdownSectionComponentProps> = ({
           <a
             className={css`
               color: white;
+              display: block;
               text-decoration: none;
               &:hover {
                 color: white;
