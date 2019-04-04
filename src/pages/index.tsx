@@ -1,8 +1,10 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import coverImage from '../images/whosecampus.jpg'
+import mobileCoverImage from '../images/mobilewhosecampus.jpg'
+import WhoseCoverPhoto from '../components/whoseCoverPhoto'
 import {
   Article,
-  CoverPhoto,
   Footer,
   Head,
   XPosition,
@@ -35,6 +37,13 @@ export const query = graphql`
 const IndexPage = ({ data }) => (
   <>
     <Head {...data.site.siteMetadata} />
+    <WhoseCoverPhoto
+      headline={"Whose Campus"}
+      imageURL={coverImage}
+      mobImageURL={mobileCoverImage}
+      xPosition={XPosition.Center}
+      yPosition={YPosition.Center}
+    />
     <NavWrapper />
     <Article dropcap={true} content={data.kerckhoffArticle.content} />
     <Footer developers="Nathan Smith" copyrightYear={2018} />
