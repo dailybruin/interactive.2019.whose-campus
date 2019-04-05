@@ -2,7 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import coverImage from '../images/whosecampus.jpg'
 import mobileCoverImage from '../images/mobilewhosecampus.jpg'
-import WhoseCoverPhoto from '../components/whoseCoverPhoto'
+import WhoseCoverPhoto from '../components/WhoseCoverPhoto'
 import NavWrapper from '../components/NavWrapper'
 import {
   Article,
