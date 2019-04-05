@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { css } from 'react-emotion'
-import NavBar2 from './Navbar2'
+import NavBar2 from './navbar2'
 import { DropdownMenu } from './DropdownMenu'
 
 interface NavWrapperProps {
