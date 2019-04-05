@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'gatsby'
 import styled, { css } from 'react-emotion'
 
 interface NavBar2Props {
@@ -117,15 +118,23 @@ class NavBar2 extends React.Component<NavBar2Props> {
         <NavLink href="/" width="50%" backColor="#161A3E">
           Whose Campus?
         </NavLink>
-        <NavLink href="/equity" width="16.667%" backColor="#6966a3">
+        <NavLink href="/equity#equity" width="16.667%" backColor="#6966a3">
           Equity
         </NavLink>
         <NavDrop>{dropDownMapping('equity')}</NavDrop>
-        <NavLink href="/diversity" width="16.667%" backColor="#56449d">
+        <NavLink
+          href="/diversity#diversity"
+          width="16.667%"
+          backColor="#56449d"
+        >
           Diversity
         </NavLink>
         <NavDrop>{dropDownMapping('diversity')}</NavDrop>
-        <NavLink href="/inclusion" width="16.667%" backColor="#46457d">
+        <NavLink
+          href="/inclusion#inclusion"
+          width="16.667%"
+          backColor="#46457d"
+        >
           Inclusion
         </NavLink>
         <NavDrop>{dropDownMapping('inclusion')}</NavDrop>

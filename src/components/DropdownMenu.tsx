@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import HamburgerMenu from 'react-hamburger-menu'
 import { css } from 'emotion'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
@@ -90,7 +91,7 @@ const DropdownSection: React.SFC<IDropdownSectionComponentProps> = ({
         `}
       >
         {articles.map(article => (
-          <a
+          <Link
             className={css`
               color: white;
               display: block;
@@ -104,7 +105,7 @@ const DropdownSection: React.SFC<IDropdownSectionComponentProps> = ({
               background-color: ${articleTabColor};
               box-shadow: 0px 3px 5px 0px #444;
             `}
-            href={article.link}
+            to={article.link}
           >
             <div
               className={css`
@@ -119,7 +120,7 @@ const DropdownSection: React.SFC<IDropdownSectionComponentProps> = ({
                 __html: article.name,
               }}
             />
-          </a>
+          </Link>
         ))}
       </div>
     </div>

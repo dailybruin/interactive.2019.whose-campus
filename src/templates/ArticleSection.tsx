@@ -51,10 +51,19 @@ export default ({ data, pageContext }) => {
           margin-right: 20px;
         `}
       >
-        <Headline text={pageContext.category.toUpperCase()} />
+        <div>
+          <div
+            id={pageContext.category.toLowerCase()}
+            className={css`
+              position: absolute;
+              top: -75px;
+            `}
+          />
+          <Headline text={pageContext.category.toUpperCase()} />
+        </div>
         {data.allKerckhoffArticle.edges
           .filter(node => node.node.category === pageContext.category)
-          .map(node => {
+          .map((node, nodeIdx) => {
             const art = node.node
             console.log(art)
             return (
@@ -104,6 +113,19 @@ export default ({ data, pageContext }) => {
                     }
                   `}
                 />
+                {nodeIdx !==
+                  data.allKerckhoffArticle.edges.filter(
+                    node => node.node.category === pageContext.category
+                  ).length -
+                    1 && (
+                  <div
+                    className={css`
+                      width: 100%;
+                      height: 1px;
+                      border: 1px solid grey;
+                    `}
+                  />
+                )}
               </div>
             )
           })}
