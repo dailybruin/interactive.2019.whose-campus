@@ -42,6 +42,9 @@ class NavBar2 extends React.Component<NavBar2Props> {
       a:not(:last-child) {
         border-bottom: 1px lightgrey solid;
       }
+      a:hover {
+        filter: brightness(125%);
+      }
       box-shadow: -1px 6px 10px 2px rgba(0, 0, 0, 0.25);
     `
 

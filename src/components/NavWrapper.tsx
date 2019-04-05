@@ -33,14 +33,14 @@ class NavWrapper extends React.Component<NavWrapperProps> {
                     const dummy = node.node
                     console.log(
                       `/${ele}#${node.node.title
-                        .substring(8)
+                        .substring(8, node.node.title.length - 4)
                         .split('')
                         .join('')}`
                     )
                     return {
                       name: dummy.headline,
                       link: `/${ele}#${dummy.title
-                        .substring(8)
+                        .substring(8, node.node.title.length - 4)
                         .split('')
                         .join('')}`,
                     }
@@ -71,14 +71,14 @@ class NavWrapper extends React.Component<NavWrapperProps> {
                     const dummy = node.node
                     console.log(
                       `/${ele}#${node.node.title
-                        .substring(8)
+                        .substring(8, node.node.title.length - 4)
                         .split('')
                         .join('')}`
                     )
                     return {
                       name: dummy.headline,
                       link: `/${ele}#${dummy.title
-                        .substring(8)
+                        .substring(8, node.node.title.length - 4)
                         .split('')
                         .join('')}`,
                     }

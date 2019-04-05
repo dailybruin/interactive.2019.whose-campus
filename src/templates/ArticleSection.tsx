@@ -75,7 +75,7 @@ export default ({ data, pageContext }) => {
               >
                 <div
                   id={art.title
-                    .substring(8)
+                    .substring(8, node.node.title.length - 4)
                     .split('')
                     .join('')}
                   className={css`
@@ -101,7 +101,7 @@ export default ({ data, pageContext }) => {
                   `}
                 />
                 <a
-                  href={'https://www.twitch.tv/'}
+                  href={'http://dailybruin.com/'}
                   className={css`
                     text-decoration: none;
                     color: white;
