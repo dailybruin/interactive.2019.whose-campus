@@ -4,7 +4,7 @@ const siteName = 'Whose Campus?'
 const description =
   'A century in, UCLA is still a campus of barriers. The university is divided, resources are limited and zero-sum politics dominate the decision making. Read more to see Daily Bruin Opinion’s analysis of equity, diversity and inclusion on campus.'
 const image =
-  'https://assets.dailybruin.com/images/interactive.2019.whose-campus/op.EDI.tadimeti.whosecampus.illo-dc3d674df2038dbbd80c07413cbe9cfc.png'
+  'https://assets.dailybruin.com/images/interactive.2019.whose-campus-2/whosecampus-612ba44fe40d2576e7cbf90e47e256f3.jpg'
 const year = '2019'
 
 const url = `https://features.dailybruin.com/${year}/${slugify(siteName)}`
