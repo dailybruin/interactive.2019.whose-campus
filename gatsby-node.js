@@ -22,6 +22,7 @@ exports.createPages = async ({ graphql, actions }) => {
               headline
               coverPhoto
               credit
+              authorBio
             }
           }
         }

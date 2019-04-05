@@ -41,7 +41,7 @@ module.exports = {
     {
       resolve: '@dailybruin/gatsby-source-kerckhoff',
       options: {
-        slug: 'interactive.2019.whose-campus',
+        slug: 'interactive.2019.whose-campus-2',
       },
     },
     {

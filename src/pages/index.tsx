@@ -39,6 +39,7 @@ export const query = graphql`
           headline
           coverPhoto
           credit
+          authorBio
         }
       }
     }
@@ -116,7 +117,15 @@ const IndexPage = ({ data }) => (
             }
           `}
         />
-        <Byline authors="Keshav Tadimeti" />
+        <a
+          href={getArticle(data).authorBio}
+          className={css`
+            text-decoration: none;
+            color: white;
+          `}
+        >
+          <Byline authors="Keshav Tadimeti" />
+        </a>
         <Article
           content={getArticle(data).content}
           style={css`

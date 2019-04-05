@@ -20,6 +20,7 @@ export const query = graphql`
           headline
           coverPhoto
           credit
+          authorBio
         }
       }
     }
@@ -101,10 +102,7 @@ export default ({ data, pageContext }) => {
                   `}
                 />
                 <a
-                  href={`http://dailybruin.com/author/${art.author
-                    .toLowerCase()
-                    .split(' ')
-                    .join('-')}/`}
+                  href={art.authorBio}
                   className={css`
                     text-decoration: none;
                     color: white;
