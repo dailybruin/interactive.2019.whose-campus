@@ -43,7 +43,7 @@ export default class WhoseCoverPhoto extends React.Component<CoverPhotoProps> {
     return (
       <div
         className={css`
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         background: linear-gradient(
           rgba(0, 0, 0, ${this.props.darken}),
@@ -83,7 +83,7 @@ export default class WhoseCoverPhoto extends React.Component<CoverPhotoProps> {
             position: absolute;
             text-align: center;
             bottom: 0px;
-            width: 100vw;
+            width: 100%;
             text-align: center;
             @media (max-width: 900px) {
               display: none;

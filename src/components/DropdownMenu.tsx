@@ -210,7 +210,7 @@ export class DropdownMenu extends React.Component<
           </div>
           <div
             className={css`
-              width: 100vw;
+              width: 100%;
               ${active ? 'height: 100%' : 'height: 0;'}
               overflow: hidden;
               transition: all 0.3s;

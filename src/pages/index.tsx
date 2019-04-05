@@ -81,12 +81,11 @@ const IndexPage = ({ data }) => (
       className={css`
         color: black;
         height: 125px;
+        width: 100%;
       `}
     />
     <div
       className={css`
-        margin-left: 20px;
-        margin-right: 20px;
         display: flex;
         justify-content: center;
         align-content: center;

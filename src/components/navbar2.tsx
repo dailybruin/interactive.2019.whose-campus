@@ -37,7 +37,7 @@ class NavBar2 extends React.Component<NavBar2Props> {
       position: absolute;
       top: 75px;
       left: 50%;
-      width: 50vw;
+      width: 50%;
       flex-direction: column;
       a:not(:last-child) {
         border-bottom: 1px lightgrey solid;
@@ -74,7 +74,7 @@ class NavBar2 extends React.Component<NavBar2Props> {
           >
             <div
               className={css`
-                width: 50vw;
+                width: 100%;
                 color: white;
                 word-wrap: break-word;
                 background-color: ${cateColor[cate]};

@@ -1,7 +1,8 @@
 const slugify = require('slugify')
 
 const siteName = 'Whose Campus?'
-const description = 'SITE_DESCRIPTION'
+const description =
+  'A century in, UCLA is still a campus of barriers. The university is divided, resources are limited and zero-sum politics dominate the decision making. Read more to see Daily Bruin Opinion’s analysis of equity, diversity and inclusion on campus.'
 const image =
   'https://assets.dailybruin.com/images/interactive.2019.whose-campus/op.EDI.tadimeti.whosecampus.illo-dc3d674df2038dbbd80c07413cbe9cfc.png'
 const year = '2019'
