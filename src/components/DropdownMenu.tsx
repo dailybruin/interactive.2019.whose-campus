@@ -100,7 +100,7 @@ const DropdownSection: React.SFC<IDropdownSectionComponentProps> = ({
                 text-decoration: none;
               }
               height: 3rem;
-              padding-left: 10vw;
+              padding-left: 5px;
               background-color: ${articleTabColor};
               box-shadow: 0px 3px 5px 0px #444;
             `}
@@ -108,13 +108,17 @@ const DropdownSection: React.SFC<IDropdownSectionComponentProps> = ({
           >
             <div
               className={css`
-                transform: translateY(50%);
                 width: 80vw;
                 color: white;
+                word-wrap: break-word;
+                @media screen and (max-width: 450px) {
+                  font-size: 0.75rem;
+                }
               `}
-            >
-              {article.name}
-            </div>
+              dangerouslySetInnerHTML={{
+                __html: article.name,
+              }}
+            />
           </a>
         ))}
       </div>

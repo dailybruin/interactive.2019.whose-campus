@@ -3,7 +3,11 @@ import { css } from 'react-emotion'
 import NavBar2 from './Navbar2'
 import { DropdownMenu } from './DropdownMenu'
 
-class NavWrapper extends React.Component {
+interface NavWrapperProps {
+  articles: any[]
+}
+
+class NavWrapper extends React.Component<NavWrapperProps> {
   render() {
     return (
       <div
@@ -34,67 +38,29 @@ class NavWrapper extends React.Component {
             titleBGColorActive="#46457D"
             dropdownColor="#6966A3"
             articleTabColor="#A2A1CD"
-            sections={[
-              {
-                name: 'equity',
-                articles: [
-                  {
-                    name: 'article one',
-                    link: '#',
-                  },
-                  {
-                    name: 'article two',
-                    link: '#',
-                  },
-                ],
-              },
-              {
-                name: 'diversity',
-                articles: [
-                  {
-                    name: 'article one',
-                    link: '#',
-                  },
-                  {
-                    name: 'article two',
-                    link: '#',
-                  },
-                  {
-                    name: 'article three',
-                    link: '#',
-                  },
-                  {
-                    name: 'article four',
-                    link: '#',
-                  },
-                  {
-                    name: 'article five',
-                    link: '#',
-                  },
-                ],
-              },
-              {
-                name: 'inclusion',
-                articles: [
-                  {
-                    name: 'article one',
-                    link: '#',
-                  },
-                  {
-                    name: 'article two',
-                    link: '#',
-                  },
-                  {
-                    name: 'article three',
-                    link: '#',
-                  },
-                  {
-                    name: 'article four',
-                    link: '#',
-                  },
-                ],
-              },
-            ]}
+            sections={['equity', 'diversity', 'inclusion'].map(ele => {
+              return {
+                name: ele,
+                articles: this.props.articles
+                  .filter(node => node.node.category === ele)
+                  .map(node => {
+                    const dummy = node.node
+                    console.log(
+                      `/${ele}#${node.node.title
+                        .substring(8)
+                        .split('')
+                        .join('')}`
+                    )
+                    return {
+                      name: dummy.headline,
+                      link: `/${ele}#${dummy.title
+                        .substring(8)
+                        .split('')
+                        .join('')}`,
+                    }
+                  }),
+              }
+            })}
           />
         </div>
       </div>

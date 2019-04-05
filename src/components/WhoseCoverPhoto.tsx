@@ -2,7 +2,6 @@ import * as React from 'react'
 import { css } from 'react-emotion'
 import Arrow from '../images/vector.png'
 
-
 export enum XPosition {
   Left = 'start',
   Center = 'center',
@@ -38,8 +37,8 @@ export default class WhoseCoverPhoto extends React.Component<CoverPhotoProps> {
       this.props.xPosition === XPosition.Center
         ? 'center'
         : this.props.xPosition === XPosition.Left
-          ? 'left'
-          : 'right'
+        ? 'left'
+        : 'right'
 
     return (
       <div
@@ -51,7 +50,7 @@ export default class WhoseCoverPhoto extends React.Component<CoverPhotoProps> {
           rgba(0, 0, 0, ${this.props.darken})
         ), linear-gradient(
             rgba(0, 0, 0, 0),
-            80%,
+            90%,
             rgba(0, 0, 0, 0.9)
         ),
         url("${this.props.imageURL}");
@@ -68,16 +67,18 @@ export default class WhoseCoverPhoto extends React.Component<CoverPhotoProps> {
           height: auto;
         }
       `}
-
       >
-          <img src={this.props.mobImageURL} className={css`
+        <img
+          src={this.props.mobImageURL}
+          className={css`
             display: none;
             align-items: center;
             @media (max-width: 900px) {
               display: flex;
             }
-          `}/>
-          <div
+          `}
+        />
+        <div
           className={css`
             position: absolute;
             text-align: center;
@@ -87,26 +88,25 @@ export default class WhoseCoverPhoto extends React.Component<CoverPhotoProps> {
             @media (max-width: 900px) {
               display: none;
             }
-          `}>
-              <div>
-              Scroll to continue
-              </div>
-              <img
-                  src={Arrow}
-                  className={css`
-                    animation: bounce 4s infinite;
-                    @keyframes bounce {
-                      0%,
-                      100% {
-                        transform: translate(0px, 4px);
-                      }
-                      50% {
-                        transform: translate(0px, 14px);
-                      }
-                    }
-                  `}
-                />
-          </div>
+          `}
+        >
+          <div>Scroll to continue</div>
+          <img
+            src={Arrow}
+            className={css`
+              animation: bounce 4s infinite;
+              @keyframes bounce {
+                0%,
+                100% {
+                  transform: translate(0px, 4px);
+                }
+                50% {
+                  transform: translate(0px, 14px);
+                }
+              }
+            `}
+          />
+        </div>
       </div>
     )
   }

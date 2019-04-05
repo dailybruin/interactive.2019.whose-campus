@@ -30,23 +30,23 @@ class NavBar2 extends React.Component {
         <div
           className={css`
             width: 100%;
-            margin: 0 0 3em 0;
+            margin: 0;
             padding: 0;
             list-style: none;
             display: flex;
             height: 75px;
           `}
         >
-          <NavLink href="#" width="50%" backColor="#161A3E">
+          <NavLink href="/" width="50%" backColor="#161A3E">
             Whose Campus?
           </NavLink>
-          <NavLink href="#" width="16.667%" backColor="#6966a3">
+          <NavLink href="/equity" width="16.667%" backColor="#6966a3">
             Equity
           </NavLink>
-          <NavLink href="#" width="16.667%" backColor="#56449d">
+          <NavLink href="/diversity" width="16.667%" backColor="#56449d">
             Diversity
           </NavLink>
-          <NavLink href="#" width="16.667%" backColor="#46457d">
+          <NavLink href="/inclusion" width="16.667%" backColor="#46457d">
             Inclusion
           </NavLink>
         </div>

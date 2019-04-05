@@ -1,10 +1,10 @@
 const slugify = require('slugify')
 
-const siteName = 'SITE_NAME'
+const siteName = 'Whose Campus?'
 const description = 'SITE_DESCRIPTION'
 const image =
-  'https://chancellor.ucla.edu/wp-content/uploads/2018/07/ChancellorBlock_1366x912_acf_cropped.jpg'
-const year = 'CURRENT_YEAR'
+  'https://assets.dailybruin.com/images/interactive.2019.whose-campus/op.EDI.tadimeti.whosecampus.illo-dc3d674df2038dbbd80c07413cbe9cfc.png'
+const year = '2019'
 
 const url = `https://features.dailybruin.com/${year}/${slugify(siteName)}`
 
@@ -15,6 +15,7 @@ module.exports = {
     url,
     image,
   },
+  pathPrefix: '/2019/whose-campus',
   plugins: [
     {
       resolve: 'gatsby-plugin-manifest',
@@ -40,7 +41,7 @@ module.exports = {
     {
       resolve: '@dailybruin/gatsby-source-kerckhoff',
       options: {
-        slug: 'online.demoaml',
+        slug: 'interactive.2019.whose-campus',
       },
     },
     {
