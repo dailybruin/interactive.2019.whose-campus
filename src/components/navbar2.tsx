@@ -59,7 +59,7 @@ class NavBar2 extends React.Component<NavBar2Props> {
           return ele.name === cate
         })
         .articles.map(article => (
-          <a
+          <Link
             className={css`
               color: white;
               display: block;
@@ -70,7 +70,7 @@ class NavBar2 extends React.Component<NavBar2Props> {
               }
               height: 3rem;
             `}
-            href={article.link}
+            to={article.link}
           >
             <div
               className={css`
@@ -96,7 +96,7 @@ class NavBar2 extends React.Component<NavBar2Props> {
                 }}
               />
             </div>
-          </a>
+          </Link>
         ))
     }
 
