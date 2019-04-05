@@ -23,7 +23,31 @@ class NavWrapper extends React.Component<NavWrapperProps> {
             }
           `}
         >
-          <NavBar2 />
+          <NavBar2
+            articleGroups={['equity', 'diversity', 'inclusion'].map(ele => {
+              return {
+                name: ele,
+                articles: this.props.articles
+                  .filter(node => node.node.category === ele)
+                  .map(node => {
+                    const dummy = node.node
+                    console.log(
+                      `/${ele}#${node.node.title
+                        .substring(8)
+                        .split('')
+                        .join('')}`
+                    )
+                    return {
+                      name: dummy.headline,
+                      link: `/${ele}#${dummy.title
+                        .substring(8)
+                        .split('')
+                        .join('')}`,
+                    }
+                  }),
+              }
+            })}
+          />
         </div>
         <div
           className={css`

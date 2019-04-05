@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import { Article, Headline, Image, Byline, Head } from '@dailybruin/lux'
+import { Article, Headline, Image, Byline, Head, Footer } from '@dailybruin/lux'
 import { css } from 'react-emotion'
 import NavWrapper from '../components/NavWrapper'
 
@@ -75,16 +75,23 @@ export default ({ data, pageContext }) => {
                   caption=""
                   alt={art.coverAlt}
                   credit="credit here"
+                  style={css`
+                    figcaption {
+                      font-style: italic;
+                      text-align: right;
+                    }
+                  `}
                 />
                 <Byline authors={art.author} />
                 <Article
                   content={art.content}
                   style={css`
                     a {
-                      color: #3298e6;
+                      color: #e6df25;
                     }
                     figcaption {
                       font-style: italic;
+                      text-align: right;
                     }
                   `}
                 />
@@ -92,6 +99,23 @@ export default ({ data, pageContext }) => {
             )
           })}
       </div>
+      <Footer
+        developers={[
+          'Richard Yang',
+          'Max Wu',
+          'Felix Zhang',
+          'Karl Huang',
+          'Mindi Cao',
+          'Kevin Qian',
+          'Lauren Ho',
+        ]}
+        copyrightYear={2018}
+        style={css`
+          margin-bottom: 0px;
+          background-color: #161a3e;
+          height: 75px;
+        `}
+      />
     </div>
   )
 }
