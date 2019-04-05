@@ -3,6 +3,7 @@ import styled, { css } from 'react-emotion'
 
 interface NavBar2Props {
   articleGroups: any
+  dummy?: any
 }
 
 class NavBar2 extends React.Component<NavBar2Props> {
