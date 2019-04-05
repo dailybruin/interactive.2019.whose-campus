@@ -35,10 +35,10 @@ class NavBar2 extends React.Component<NavBar2Props> {
       position: absolute;
       top: 75px;
       left: 50%;
-      width: 50%;
+      width: 50vw;
       flex-direction: column;
       a:not(:last-child) {
-        border-bottom: 1px grey solid;
+        border-bottom: 1px lightgrey solid;
       }
       box-shadow: -1px 6px 10px 2px rgba(0, 0, 0, 0.25);
     `
@@ -69,7 +69,7 @@ class NavBar2 extends React.Component<NavBar2Props> {
           >
             <div
               className={css`
-                width: 80vw;
+                width: 50vw;
                 color: white;
                 word-wrap: break-word;
                 background-color: ${cateColor[cate]};
@@ -79,6 +79,7 @@ class NavBar2 extends React.Component<NavBar2Props> {
                 }
                 display: flex;
                 align-items: center;
+                font-family: Montserrat;
               `}
             >
               <span

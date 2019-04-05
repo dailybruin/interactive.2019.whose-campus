@@ -5,7 +5,7 @@ import 'normalize.css'
 const typography = new Typography({
   googleFonts: [
     {
-      name: 'Libre Baskerville',
+      name: 'Lato',
       styles: ['400'],
     },
     {
@@ -13,8 +13,8 @@ const typography = new Typography({
       styles: ['400', '600'],
     },
   ],
-  headerFontFamily: ['Georgia', 'serif'],
-  bodyFontFamily: ['Libre Baskerville', 'serif'],
+  headerFontFamily: ['Montserrat', 'serif'],
+  bodyFontFamily: ['Lato', 'serif'],
 })
 
 export default typography

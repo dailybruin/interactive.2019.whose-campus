@@ -19,6 +19,7 @@ export const query = graphql`
           coverAlt
           headline
           coverPhoto
+          credit
         }
       }
     }
@@ -38,7 +39,7 @@ export default ({ data, pageContext }) => {
       <div
         className={css`
           color: black;
-          height: 125px;
+          height: 100px;
         `}
       />
       <div
@@ -50,21 +51,29 @@ export default ({ data, pageContext }) => {
           margin-right: 20px;
         `}
       >
+        <Headline text={pageContext.category.toUpperCase()} />
         {data.allKerckhoffArticle.edges
           .filter(node => node.node.category === pageContext.category)
           .map(node => {
             const art = node.node
+            console.log(art)
             return (
               <div
-                id={art.title
-                  .substring(8)
-                  .split('')
-                  .join('')}
                 className={css`
                   margin-top: 20px;
                   max-width: 700px;
                 `}
               >
+                <div
+                  id={art.title
+                    .substring(8)
+                    .split('')
+                    .join('')}
+                  className={css`
+                    position: relative;
+                    top: -125px;
+                  `}
+                />
                 <h1
                   dangerouslySetInnerHTML={{
                     __html: art.headline,
@@ -74,7 +83,7 @@ export default ({ data, pageContext }) => {
                   url={art.coverPhoto}
                   caption=""
                   alt={art.coverAlt}
-                  credit="credit here"
+                  credit={art.credit}
                   style={css`
                     figcaption {
                       font-style: italic;

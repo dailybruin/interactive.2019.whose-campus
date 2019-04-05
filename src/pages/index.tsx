@@ -8,6 +8,7 @@ import {
   Article,
   Byline,
   Footer,
+  Image,
   Head,
   XPosition,
   YPosition,
@@ -37,11 +38,21 @@ export const query = graphql`
           coverAlt
           headline
           coverPhoto
+          credit
         }
       }
     }
   }
 `
+
+const getArticle = data => {
+  return data.allKerckhoffArticle.edges.find(node => {
+    return node.node.author === 'Keshav Tadimeti'
+  }).node
+}
+
+const Subheading = props => <h2 className={css``}>{props.text}</h2>
+
 const IndexPage = ({ data }) => (
   <div
     className={css`
@@ -87,14 +98,36 @@ const IndexPage = ({ data }) => (
           max-width: 700px;
         `}
       >
+        <h1
+          dangerouslySetInnerHTML={{
+            __html: getArticle(data).headline,
+          }}
+        />
+        <Image
+          url={getArticle(data).coverPhoto}
+          caption=""
+          alt={getArticle(data).coverAlt}
+          credit={getArticle(data).credit}
+          style={css`
+            figcaption {
+              font-style: italic;
+              text-align: right;
+            }
+          `}
+        />
         <Byline authors="Keshav Tadimeti" />
         <Article
-          dropcap={true}
-          content={
-            data.allKerckhoffArticle.edges.find(node => {
-              return node.node.author === 'Keshav Tadimeti'
-            }).node.content
-          }
+          content={getArticle(data).content}
+          style={css`
+            a {
+              color: #e6df25;
+            }
+            figcaption {
+              font-style: italic;
+              text-align: right;
+            }
+          `}
+          customTypeComponentMapping={{ subheading: Subheading }}
         />
       </div>
     </div>

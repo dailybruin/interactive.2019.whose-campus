@@ -21,6 +21,7 @@ exports.createPages = async ({ graphql, actions }) => {
               coverAlt
               headline
               coverPhoto
+              credit
             }
           }
         }
