@@ -60,14 +60,13 @@ const DropdownSection: React.SFC<IDropdownSectionComponentProps> = ({
         `}
         onClick={toggleExpand}
       >
-        <Link
-          to="/#top"
+        <div
           className={css`
             margin: auto auto auto 3rem;
           `}
         >
           {name}
-        </Link>
+        </div>
         <div
           className={css`
             height: 100%;
@@ -98,8 +97,8 @@ const DropdownSection: React.SFC<IDropdownSectionComponentProps> = ({
               display: block;
               text-decoration: none;
               &:hover {
-                color: white;
                 text-decoration: none;
+                color: white;
               }
               height: 3rem;
               padding-left: 5px;
@@ -196,16 +195,18 @@ export class DropdownMenu extends React.Component<
                 color="white"
               />
             </div>
-            <div
+            <Link
+              to="/#top"
               className={css`
                 color: white;
                 letter-spacing: 3px;
                 font-size: 1.5rem;
                 margin: 0 auto;
+                text-decoration: none;
               `}
             >
               {title}
-            </div>
+            </Link>
           </div>
           <div
             className={css`
