@@ -129,11 +129,7 @@ class NavBar2 extends React.Component<NavBar2Props> {
           Diversity
         </NavLink>
         <NavDrop>{dropDownMapping('diversity')}</NavDrop>
-        <NavLink
-          href="/inclusion/#inclusion"
-          width="16.667%"
-          backColor="#46457d"
-        >
+        <NavLink to="/inclusion/#inclusion" width="16.667%" backColor="#46457d">
           Inclusion
         </NavLink>
         <NavDrop>{dropDownMapping('inclusion')}</NavDrop>

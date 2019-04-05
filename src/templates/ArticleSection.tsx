@@ -101,7 +101,10 @@ export default ({ data, pageContext }) => {
                   `}
                 />
                 <a
-                  href={'http://dailybruin.com/'}
+                  href={`http://dailybruin.com/author/${art.author
+                    .toLowerCase()
+                    .split(' ')
+                    .join('-')}/`}
                   className={css`
                     text-decoration: none;
                     color: white;
