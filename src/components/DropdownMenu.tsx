@@ -60,13 +60,14 @@ const DropdownSection: React.SFC<IDropdownSectionComponentProps> = ({
         `}
         onClick={toggleExpand}
       >
-        <div
+        <Link
+          to="/#top"
           className={css`
             margin: auto auto auto 3rem;
           `}
         >
           {name}
-        </div>
+        </Link>
         <div
           className={css`
             height: 100%;

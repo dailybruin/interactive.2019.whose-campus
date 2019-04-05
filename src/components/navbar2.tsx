@@ -13,9 +13,9 @@ class NavBar2 extends React.Component<NavBar2Props> {
       backColor: string
       width: string
       children: string
-      href: string
+      to: string
     }
-    const NavLink = styled.a`
+    const NavLink = styled(Link)`
       padding: 8px 15px;
       text-decoration: none;
       font-family: Montserrat;
@@ -115,23 +115,19 @@ class NavBar2 extends React.Component<NavBar2Props> {
         `}
       >
         {console.log('asdf', dropDownMapping('equity'))}
-        <NavLink href="/" width="50%" backColor="#161A3E">
+        <NavLink to="/#top" width="50%" backColor="#161A3E">
           Whose Campus?
         </NavLink>
-        <NavLink href="/equity#equity" width="16.667%" backColor="#6966a3">
+        <NavLink to="/equity/#equity" width="16.667%" backColor="#6966a3">
           Equity
         </NavLink>
         <NavDrop>{dropDownMapping('equity')}</NavDrop>
-        <NavLink
-          href="/diversity#diversity"
-          width="16.667%"
-          backColor="#56449d"
-        >
+        <NavLink to="/diversity/#diversity" width="16.667%" backColor="#56449d">
           Diversity
         </NavLink>
         <NavDrop>{dropDownMapping('diversity')}</NavDrop>
         <NavLink
-          href="/inclusion#inclusion"
+          href="/inclusion/#inclusion"
           width="16.667%"
           backColor="#46457d"
         >

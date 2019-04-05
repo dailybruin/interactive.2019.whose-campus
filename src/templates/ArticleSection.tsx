@@ -100,7 +100,15 @@ export default ({ data, pageContext }) => {
                     }
                   `}
                 />
-                <Byline authors={art.author} />
+                <a
+                  href={'https://www.twitch.tv/'}
+                  className={css`
+                    text-decoration: none;
+                    color: white;
+                  `}
+                >
+                  <Byline authors={art.author} />
+                </a>
                 <Article
                   content={art.content}
                   style={css`

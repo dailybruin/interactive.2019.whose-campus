@@ -77,6 +77,7 @@ const IndexPage = ({ data }) => (
     />
     <NavWrapper articles={data.allKerckhoffArticle.edges} />
     <div
+      id="top"
       className={css`
         color: black;
         height: 125px;
