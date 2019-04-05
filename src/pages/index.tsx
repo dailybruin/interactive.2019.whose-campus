@@ -67,7 +67,6 @@ const IndexPage = ({ data }) => (
       color: white;
     `}
   >
-    {console.log(data)}
     <Head {...data.site.siteMetadata} />
     <WhoseCoverPhoto
       headline={'Whose Campus'}

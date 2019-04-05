@@ -31,12 +31,6 @@ class NavWrapper extends React.Component<NavWrapperProps> {
                   .filter(node => node.node.category === ele)
                   .map(node => {
                     const dummy = node.node
-                    console.log(
-                      `/${ele}#${node.node.title
-                        .substring(8, node.node.title.length - 4)
-                        .split('')
-                        .join('')}`
-                    )
                     return {
                       name: dummy.headline,
                       link: `/${ele}#${dummy.title
@@ -69,12 +63,6 @@ class NavWrapper extends React.Component<NavWrapperProps> {
                   .filter(node => node.node.category === ele)
                   .map(node => {
                     const dummy = node.node
-                    console.log(
-                      `/${ele}#${node.node.title
-                        .substring(8, node.node.title.length - 4)
-                        .split('')
-                        .join('')}`
-                    )
                     return {
                       name: dummy.headline,
                       link: `/${ele}#${dummy.title

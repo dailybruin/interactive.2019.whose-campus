@@ -28,7 +28,6 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     `).then(_ => {
-      console.log('creating page', category)
       createPage({
         path: `${category}`,
         component: path.resolve(`./src/templates/ArticleSection.tsx`),

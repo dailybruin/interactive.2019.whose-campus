@@ -66,7 +66,6 @@ export default ({ data, pageContext }) => {
           .filter(node => node.node.category === pageContext.category)
           .map((node, nodeIdx) => {
             const art = node.node
-            console.log(art)
             return (
               <div
                 className={css`

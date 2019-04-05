@@ -117,7 +117,6 @@ class NavBar2 extends React.Component<NavBar2Props> {
           }
         `}
       >
-        {console.log('asdf', dropDownMapping('equity'))}
         <NavLink to="/#top" width="50%" backColor="#161A3E">
           Whose Campus?
         </NavLink>
